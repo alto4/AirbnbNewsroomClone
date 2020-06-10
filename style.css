@@ -62,11 +62,28 @@ nav .navbar-brand img {
   color: #222;
   font-size: 22px;
 }
+
 a {
   color: #008489;
 }
+
+.btn-more {
+  background-color: #008489;
+  outline: none;
+  border: none;
+  margin: 100px auto;
+}
+
+.btn-more:hover {
+  background-color: #006b70;
+}
+
 @media (max-width: 980px) {
   .container {
     padding: 0 24px;
+  }
+
+  .btn-more {
+    margin: 20px auto;
   }
 }
