@@ -146,6 +146,9 @@ a {
   .btn-more {
     margin: 20px auto 50px;
   }
+}
+
+@media (max-width: 780px) {
   .scroll-overflow {
     overflow-x: scroll;
   }
