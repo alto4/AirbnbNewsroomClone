@@ -38,7 +38,7 @@
 
       <!-- Hamburger Toggler Icon -->
       <button
-        class="navbar-toggler"
+        class="navbar-toggler border-0"
         type="button"
         data-toggle="collapse"
         href="#navbarDropdown"
@@ -63,24 +63,12 @@
           </li>
 
           <!-- Language Dropdown -->
-          <li class="nav-item">
-            <a
-              class="nav-link dropdown-toggle text-dark pl-4 py-3"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              <i class="fa fa-globe fa-lg pr-2"></i> English
+          <li class="nav-item p-2 d-flex align-items-center">
+            <i class="fa fa-globe fa-lg"></i>
+            <a class="nav-link text-dark" href="#">
+               English
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+            
           </li>
           <li class="nav-item py-2 pl-4 pr-3">
             <a class="nav-link" href="#"><i class="fa fa-search fa-lg"></i></a>
@@ -89,33 +77,69 @@
       </div>
 
       <!-- Dropdown Menu -->
-      <div class="d-xl-none collapse navbar-collapse" id="navbarDropdown">
-        <a class="nav-item nav-link" href="#">Home</a>
-        <hr />
-        <a class="nav-item nav-link" href="#">Invite friends</a>
-        <a class="nav-item nav-link" href="#">Refer hosts</a>
-        <a class="nav-item nav-link" href="#">Airbnb for work</a>
-        <hr />
-        <a class="nav-item nav-link" href="#"
-          >Host a home<br /><small
-            >Earn up to <b>$12,319 HKD a month</b></small
-          ></a
-        >
-        <a class="nav-item nav-link" href="#">Host an experience</a>
-        <a class="nav-item nav-link" href="#">Sign up</a>
-        <a class="nav-item nav-link" href="#">Log in</a>
-        <hr />
-        <a class="nav-item nav-link" href="#">Help</a>
-      </div>
+      <div class="d-xl-none collapse navbar-collapse position-absolute bg-white p-4" id="navbarDropdown">
+        <div class="w-100 d-flex justify-content-end ">
+        <a class="navbar-toggler font-weight-bold position-relative border-0 collapsed justify-self-end" role="button" data-toggle="collapse" href="#navbarDropdown" id="navbarDropdownToggler">X</a>
+        </div>
+        <!-- Searchbar -->
+        <form class="mt-4">
+          <div class="form-group position-relative" id="dropdown-input">
+            <input type="text" class="form-control px-5 py-4" aria-describedby="searchInput" placeholder="What are you looking for?">
+            <i class="fa fa-search fa-lg position-absolute"></i>
+          </div>
+          <!-- Language Dropdown -->
+          <div class="form-group position-relative" id="dropdown-input"> 
+            <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">           
+              <input type="text" class="form-control px-5 py-4" aria-describedby="languageDropdownMenu" placeholder="English">
+              <i class="fa fa-globe fa-lg position-absolute"></i>
+              <i class="fa fa-chevron-down position-absolute" id="chevronMenuToggler"></i></a>
+              <div class="dropdown-menu rounded position-absolute" aria-labelledby="dropdownMenuLink" id="languages-dropdown-menu">
+                <a class="dropdown-header text-info font-weight-bold" href="#">English</a>
+                <div class="pl-4">
+                  <a class="dropdown-item" href="#">United States</a>
+                  <a class="dropdown-item text-info" href="#">Canada</a>
+                  <a class="dropdown-item" href="#">Asia Pacific</a>
+                  <a class="dropdown-item" href="#">AU and NZ</a>
+                  <a class="dropdown-item" href="#">India</a>
+                  <a class="dropdown-item" href="#">United Kingdom</a>
+                </div>
+                <a class="dropdown-item" href="#">Francais</a>
+                <a class="dropdown-item" href="#">Deutsch</a>
+                <a class="dropdown-item" href="#">Italiano</a>
+                <a class="dropdown-item"href="#">普通话</a>
+                <a class="dropdown-item"href="#">한글</a>
+                <a class="dropdown-item"href="#">九聲六調</a>
+                <a class="dropdown-item" href="#">Espanol (Espana)</a>
+                <a class="dropdown-item" href="#">Espanol (American Latina)</a>
+                <a class="dropdown-item" href="#">Portugues (Brazil)</a>
+                <a class="dropdown-item" href="#">Portugues (Portugal)</a>
+
+              </div>
+          </div>
+        </form>
+        <ul class="navbar-nav ml-auto ">
+          <li class="nav-item p-2">
+            <a class="nav-link text-dark" href="#">About Us</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link text-dark" href="#">Fast Facts</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link text-dark" href="#">Media Assets</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link text-dark" href="#">Contact</a>
+          </li>
+        </ul>
     </nav>
 
-    <hr />
+    <hr class="mt-0" />
     <div class="container mt-5">
       <!-- Hero/Featured Article Section -->
       <div class="row hero-section">
         <div class="col-md-8">
           <div
-            class="aspectRatioBox rounded mr-2 mb-3"
+            class="aspectRatioBox rounded mr-2 mb-3 img-responsive"
             style="background-image: url('./images/feature.jpg');"
           ></div>
         </div>
@@ -443,15 +467,16 @@
           <span>&copy; Airbnb, Inc.</span>
         </div>
         <ul class="list-unstyled d-flex">
+          <li class="px-2"><a href="#">Cookie Preferences</a></li>
           <li class="px-2"><a href="#">Terms & Privacy</a></li>
-          <li class="px-2">
-            <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
+          <li class="px-3">
+            <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
           </li>
-          <li class="px-2">
-            <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+          <li class="px-3">
+            <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
           </li>
-          <li class="px-2">
-            <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+          <li class="px-3">
+            <a href="#"><i class="fa fa-instagram fa-lg"></i></a>
           </li>
         </ul>
       </div>
