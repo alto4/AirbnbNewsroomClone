@@ -63,11 +63,33 @@
           </li>
 
           <!-- Language Dropdown -->
-          <li class="nav-item p-2 d-flex align-items-center">
-            <i class="fa fa-globe fa-lg"></i>
-            <a class="nav-link text-dark" href="#">
-               English
-            </a>
+          <li id="languages" class="nav-item p-2 d-flex align-items-center position-relative ml-2">
+            <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">           
+              <input type="text" class="form-control pl-5" aria-describedby="languageDropdownMenu" placeholder="English">
+              <i class="fa fa-globe fa-lg position-absolute"></i>
+              <i class="fa fa-chevron-down position-absolute" id="chevronMenuToggler"></i></a>
+              <div class="dropdown-menu rounded position-absolute" aria-labelledby="dropdownMenuLink" id="languages-dropdown-menu">
+                <a class="dropdown-header text-info font-weight-bold" href="#">English</a>
+                <div class="pl-4">
+                  <a class="dropdown-item" href="#">United States</a>
+                  <a class="dropdown-item text-info" href="#">Canada</a>
+                  <a class="dropdown-item" href="#">Asia Pacific</a>
+                  <a class="dropdown-item" href="#">AU and NZ</a>
+                  <a class="dropdown-item" href="#">India</a>
+                  <a class="dropdown-item" href="#">United Kingdom</a>
+                </div>
+                <a class="dropdown-item" href="#">Francais</a>
+                <a class="dropdown-item" href="#">Deutsch</a>
+                <a class="dropdown-item" href="#">Italiano</a>
+                <a class="dropdown-item"href="#">普通话</a>
+                <a class="dropdown-item"href="#">한글</a>
+                <a class="dropdown-item"href="#">九聲六調</a>
+                <a class="dropdown-item" href="#">Espanol (Espana)</a>
+                <a class="dropdown-item" href="#">Espanol (American Latina)</a>
+                <a class="dropdown-item" href="#">Portugues (Brazil)</a>
+                <a class="dropdown-item" href="#">Portugues (Portugal)</a>
+
+              </div>
             
           </li>
           <li class="nav-item py-2 pl-4 pr-3">
@@ -139,7 +161,7 @@
       <div class="row hero-section">
         <div class="col-md-8">
           <div
-            class="aspectRatioBox rounded mr-2 mb-3 img-responsive"
+            class="aspectRatioBox rounded mr-xl-2 mb-3 mt-4 img-responsive"
             style="background-image: url('./images/feature.jpg');"
           ></div>
         </div>
@@ -231,17 +253,18 @@
 
       <!-- News Categories Section -->
       <ul
-        class="section-title list-unstyled d-flex w-100 flex-wrap"
+        class="section-title list-unstyled d-flex w-100 scroll-overflow text-nowrap py-4 font-weight-bold"
         id="news-categories"
       >
-        <li><a href="#" class="text-dark pr-4">All</a></li>
-        <li><a href="#" class="text-dark pr-4">Company</a></li>
-        <li><a href="#" class="text-dark pr-4">Stays</a></li>
-        <li><a href="#" class="text-dark pr-4">Experiences</a></li>
-        <li><a href="#" class="text-dark pr-4">Open Homes</a></li>
-        <li><a href="#" class="text-dark pr-4">Policy</a></li>
-        <li><a href="#" class="text-dark pr-4">Community</a></li>
+        <li><a href="#" class="text-dark mr-4 py-2 current">All</a></li>
+        <li><a href="#" class="text-dark mr-4 py-2">Company</a></li>
+        <li><a href="#" class="text-dark mr-4 py-2">Stays</a></li>
+        <li><a href="#" class="text-dark mr-4 py-2">Experiences</a></li>
+        <li><a href="#" class="text-dark mr-4 py-2">Open Homes</a></li>
+        <li><a href="#" class="text-dark mr-4 py-2">Policy</a></li>
+        <li><a href="#" class="text-dark mr-4 py-2">Community</a></li>
       </ul>
+      <hr class="my-4 d-md-none" />
       <div class="row">
         <div class="col-md-4">
           <div class="article px-2">
@@ -458,9 +481,11 @@
           </p>
         </div>
       </div>
+    </div>
 
       <hr class="my-4 d-none d-md-block" />
       <!-- Footer Bottom -->
+    <div class="footer container">
       <div class="w-100 d-flex justify-content-between my-4">
         <div>
           <img src="./images/footer-logo.jpg" alt="Airbnb logo." />
@@ -481,6 +506,7 @@
         </ul>
       </div>
     </div>
+  </div>  
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
